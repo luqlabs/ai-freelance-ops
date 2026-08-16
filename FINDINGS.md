@@ -1,4 +1,4 @@
-# TEMUAN — [PROJECT NAME]
+# FINDINGS — [PROJECT NAME]
 
 > Technical facts with IDs. Never deleted — only CLOSED or SUPERSEDED with forward reference.
 

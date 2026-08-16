@@ -42,7 +42,7 @@
 - Products: 0 products (client sending photos incrementally)
 - Categories: "Uncategorized" only
 - Evidence: `scratchpad/wp-admin-inventory-2607.md` with screenshot paths
-- 🔓 AGENT 1 DONE — WP admin analysis complete, findings logged to TEMUAN.md (T2-T5)
+- 🔓 AGENT 1 DONE — WP admin analysis complete, findings logged to FINDINGS.md (T2-T5)
 
 ## 2026-07-25
 
@@ -65,7 +65,7 @@
 - Read CLAUDE.md contract + scope
 - Created folder structure: reference/, scratchpad/, hasil-preview/, assets/
 - Added SECRETS.local.md to .gitignore (verified not tracked)
-- Created TEMUAN.md with T1 (credentials sent plaintext)
+- Created FINDINGS.md with T1 (credentials sent plaintext)
 - Created CHECKPOINT.md template
 - Evidence: folder structure exists, .gitignore contains SECRETS.local.md
 - 🔓 AGENT 1 DONE — Project structure ready

@@ -1,6 +1,6 @@
 # [PROJECT NAME] — [CLIENT NAME]
 
-> This file = brain & job contract: context, scope, access boundaries, and work character. **NOT status** — status only in PROGRES.md. Credentials only in SECRETS.local.md (gitignored). Technical details → TEMUAN.md. Before risky action → write CHECKPOINT.md first.
+> This file = brain & job contract: context, scope, access boundaries, and work character. **NOT status** — status only in PROGRES.md. Credentials only in SECRETS.local.md (gitignored). Technical details → FINDINGS.md. Before risky action → write CHECKPOINT.md first.
 
 ---
 
@@ -56,7 +56,7 @@
 4. **Visual changes = MEASURE first** — reference → target numbers (px, hex, font) → apply → measure again → report target vs live.
 5. **Chat output max 200 words**; long details to file.
 6. Message **"."** from operator = continue last work without asking.
-7. **Log PROGRES/TEMUAN before switching steps.**
+7. **Log PROGRES/FINDINGS before switching steps.**
 8. **Go per item** — backlog numbered, execute one-by-one only after explicit operator go.
 9. **Cache awareness** — purge + check as guest/anon + cache-bypass query before concluding results.
 10. Chat brief & neutral; technical details in FILE. Close every response: `Next effort: <level> — reason`.
@@ -64,7 +64,7 @@
 ## 7. Status & Source of Truth
 
 - **PROGRES.md = SINGLE source of status** (chronological log, newest on top, STOP POINT markers).
-- TEMUAN.md = technical findings with IDs (T1, T2, …) — never deleted, only CLOSED/corrected.
+- FINDINGS.md = technical findings with IDs (T1, T2, …) — never deleted, only CLOSED/corrected.
 - CLAUDE.md = character + contract.
 - Two conflicting notes → verify evidence. Stale fact → banner `⚠️ SUPERSEDED <date>`, DON'T delete silently.
 
@@ -86,7 +86,7 @@
 
 - `CLAUDE.md` — brain & contract (this file)
 - `PROGRES.md` — chronological log, single source of status
-- `TEMUAN.md` — technical findings with IDs
+- `FINDINGS.md` — technical findings with IDs
 - `CHECKPOINT.md` — dead-man's switch (§11)
 - `SECRETS.local.md` — credentials (gitignored)
 - `SS chat client/` — client chat screenshots (gitignored)
@@ -116,9 +116,55 @@ New session resume: read CHECKPOINT.md → last STOP POINT entry in PROGRES.md �
 
 ### 12.2 File Write Rights
 
-- **Support MAY:** `PROGRES.md` (append only), `TEMUAN.md` (append only), `scratchpad/**`, `reference/**`
+- **Support MAY:** `PROGRES.md` (append only), `FINDINGS.md` (append only), `scratchpad/**`, `reference/**`
 - **Support FORBIDDEN:** write actions to live system, `CLAUDE.md`, `assets/**`, git commit/push, delete any file.
 
 ### 12.3 Handoff
 
 Via file, not chat. Keys: `🔒 AGENT N START — <task>` / `🔓 AGENT N DONE — <result>` in PROGRES.md.
+
+## 13. Context Management & Compact Protocol
+
+> AI agent context windows have token limits. When approaching limits, context is compacted (summarized). This protocol ensures zero information loss across compaction.
+
+### 13.1 Why This Matters
+
+Without discipline, compaction loses state:
+- "What was the last action?" → forgotten
+- "What's still waiting?" → lost backlog
+- "Was that risky action completed?" → no checkpoint
+
+This methodology prevents all three with **persist-before-compact** discipline.
+
+### 13.2 Pre-Compact Checklist
+
+BEFORE requesting or allowing compaction, agent MUST:
+
+1. ✅ **Update PROGRES.md** — last action logged with concrete evidence (screenshot/data/URL)
+2. ✅ **Update FINDINGS.md** — all new technical findings have IDs (T1, T2, …) + status + evidence
+3. ✅ **Write STOP POINT in PROGRES.md** — current state summary + numbered backlog
+4. ✅ **Write CHECKPOINT.md** — if risky action pending, write all 4 fields (a/b/c/d)
+5. ✅ **Report to operator** — 1 paragraph: what's done + what's waiting + next effort level
+6. ✅ **State "ready to compact"** — only after above 5 steps complete
+
+### 13.3 When to Compact
+
+Compact at milestones, not mid-task:
+- ✅ After completing a numbered backlog item
+- ✅ After writing analysis report to file
+- ✅ After client decision logged + next phase planned
+- ❌ NOT mid-implementation of a single change
+- ❌ NOT when CHECKPOINT.md has pending risky action
+
+**Token guideline:** Operator may request compact when context reaches 200k–300k tokens to prevent token bloat. Agent should not compact mid-action — finish the current atomic task, persist state per §13.2, then confirm ready.
+
+### 13.4 Post-Compact Resume
+
+New session after compaction:
+1. Read PROGRES.md → find last STOP POINT → understand current state + backlog
+2. Read CHECKPOINT.md → check if risky action was pending
+3. If pending action exists → verify read-only if already happened (§11 protocol)
+4. If no pending action → wait for operator go on next backlog item
+5. DON'T re-ask questions already answered in PROGRES.md or `SS chat client/`
+
+Success measure: "Can new session resume without asking operator what happened last?"

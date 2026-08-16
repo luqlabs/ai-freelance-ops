@@ -15,13 +15,14 @@ This folder contains an anonymized real-world example of using `ai-freelance-ops
 
 1. **CHECKPOINT.md** — Dead-man's switch before changing WooCommerce currency (shows exact verification method)
 2. **PROGRES.md** — Chronological log with STOP POINT, newest entries on top, 🔒/🔓 agent markers
-3. **TEMUAN.md** — 6 technical findings (T1-T6) that never get deleted, only marked CLOSED/SUPERSEDED
+3. **FINDINGS.md** — 6 technical findings (T1-T6) that never get deleted, only marked CLOSED/SUPERSEDED
 4. **CLAUDE.md** — Complete job contract with:
    - Commercial context (price, timeline, revisions)
    - Scope as CONTRACT (not to-do list)
    - 6-gate execution protocol for live site
    - Security boundaries (max 2 login attempts, cache awareness, no AI traces)
    - Multi-agent split by reversibility (optional)
+   - Context management & compact protocol (§13)
 
 ## Key Patterns Demonstrated
 
@@ -32,7 +33,7 @@ Before risky action (currency change):
 - **(c)** How to verify if already happened (read-only)
 - **(d)** Action per outcome
 
-### TEMUAN.md immutability
+### FINDINGS.md immutability
 - T1-T6 never deleted
 - Status field: OPEN / CLOSED / SUPERSEDED → T[N]
 - Each finding has: Evidence / Implication / Action
@@ -53,7 +54,7 @@ Session 4 ends with:
 - `SECRETS.local.md` — credentials
 - `SS chat client/` — client chat screenshots
 - `scratchpad/` — temporary work artifacts (some referenced in PROGRES.md)
-- `reference/` — client assets (some referenced in TEMUAN.md)
+- `reference/` — client assets (some referenced in FINDINGS.md)
 
 ## How This Maps to Your Project
 
@@ -61,7 +62,7 @@ Clone the parent repo, fill your own:
 - Client name/contact in CLAUDE.md §1
 - Scope items in CLAUDE.md §2
 - Start logging in PROGRES.md with your first session
-- Create TEMUAN.md entries as you discover technical facts
+- Create FINDINGS.md entries as you discover technical facts
 - Write CHECKPOINT.md before every risky action
 
 The structure stays the same; only the content changes per project.

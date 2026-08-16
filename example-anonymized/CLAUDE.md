@@ -1,6 +1,6 @@
 # Catalog UI Redesign — example-client.com
 
-> This file = brain & job contract: context, scope, access boundaries, and work character. **NOT status** — work status only in PROGRES.md. Credentials only in SECRETS.local.md (gitignored, DON'T commit). Long technical details → TEMUAN.md. Before risky action → write CHECKPOINT.md first.
+> This file = brain & job contract: context, scope, access boundaries, and work character. **NOT status** — work status only in PROGRES.md. Credentials only in SECRETS.local.md (gitignored, DON'T commit). Long technical details → FINDINGS.md. Before risky action → write CHECKPOINT.md first.
 
 ---
 
@@ -63,7 +63,7 @@ Public read-only analysis **completed 2026-07-25** → **LAPORAN-ANALISA.md** (s
 5. **Research references first** for every design task; don't add/install WP plugins without approval.
 6. **Chat output max 200 words**, prose/bullets NO tables; long details to file; every WP edit show "what changed → where to see it in wp-admin".
 7. Message **"."** from operator = continue last work without asking.
-8. **Log PROGRES/TEMUAN before switching steps** — success measure: "if session dies now, can new session continue without re-asking?"
+8. **Log PROGRES/FINDINGS before switching steps** — success measure: "if session dies now, can new session continue without re-asking?"
 9. **Go per item** — backlog numbered, execute one-by-one only after explicit operator go.
 10. Draft client communication → `scratchpad/draft-reply-client-DDMM.md`: top = ready-to-send text (polite language), separator `---`, then block "Notes for operator (don't send)". Draft only if requested. **Standing rule: WA drafts as brief as possible** — start with core, don't repeat info already sent, long material → offer to split into multiple short messages.
 11. **Cache awareness** from day one — identify cache plugins during analysis; purge + check as guest/anon + cache-bypass query (`?verif=NNNN`) before concluding results; client screenshot "no change" → suggest hard-refresh first.
@@ -74,7 +74,7 @@ Public read-only analysis **completed 2026-07-25** → **LAPORAN-ANALISA.md** (s
 ## 7. Status & Source of Truth
 
 - **PROGRES.md = SINGLE source of status** (chronological log, newest on top, STOP POINT markers).
-- TEMUAN.md = technical findings with IDs (T1, T2, …) with evidence & status; never deleted, only CLOSED/corrected.
+- FINDINGS.md = technical findings with IDs (T1, T2, …) with evidence & status; never deleted, only CLOSED/corrected.
 - CLAUDE.md = character + contract; harness memory = point-in-time history.
 - Two conflicting notes → verify evidence (public HTML / wp-admin read-only). Stale fact → banner `⚠️ SUPERSEDED <date>` + reference, DON'T delete silently.
 
@@ -98,7 +98,7 @@ Public read-only analysis **completed 2026-07-25** → **LAPORAN-ANALISA.md** (s
 
 - `CLAUDE.md` — brain & contract (this file).
 - `PROGRES.md` — chronological log, single source of status.
-- `TEMUAN.md` — technical findings with IDs.
+- `FINDINGS.md` — technical findings with IDs.
 - `CHECKPOINT.md` — dead-man's switch (§11).
 - `SECRETS.local.md` — credentials (gitignored).
 - `SS chat client/` — client chat screenshots (gitignored).
@@ -128,7 +128,7 @@ New session resume: read CHECKPOINT.md → last STOP POINT entry in PROGRES.md �
 
 ### 12.2 File Write Rights
 
-- **Support MAY:** `PROGRES.md` (append only), `TEMUAN.md` (append only), `scratchpad/**`, `reference/**`
+- **Support MAY:** `PROGRES.md` (append only), `FINDINGS.md` (append only), `scratchpad/**`, `reference/**`
 - **Support FORBIDDEN:** write actions to live system, `CLAUDE.md`, `assets/**`, git commit/push, delete any file.
 
 ### 12.3 Handoff

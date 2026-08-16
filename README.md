@@ -33,7 +33,7 @@ If session dies badly, new session can resume without asking — just read CHECK
 ### 2. PROGRES.md — Single Source of Truth
 Chronological log, newest on top, with a STOP POINT marker at end of each session. No status in other files.
 
-### 3. TEMUAN.md — Immutable Issue Tracker
+### 3. FINDINGS.md — Immutable Issue Tracker
 Technical findings with IDs (T1, T2, ...). Never deleted — only CLOSED or SUPERSEDED with forward references. Creates permanent audit trail for clients.
 
 ### 4. 6-Gate Execution Protocol
@@ -73,7 +73,7 @@ Then fill:
 ```
 CLAUDE.md           ← brain & job contract
 PROGRES.md          ← single source of status
-TEMUAN.md           ← immutable technical findings with IDs
+FINDINGS.md         ← immutable technical findings with IDs
 CHECKPOINT.md       ← dead-man's switch pre-action
 SECRETS.local.md    ← credentials (gitignored)
 SS chat client/     ← client chat screenshots (gitignored)
@@ -98,7 +98,7 @@ Research across GitHub found no public repo combining these 5 patterns:
 1. **Dead-man's switch idempotency** — 4-field pre-action record (exact action + current state + verification method + recovery path) not found in any checkpoint system
 2. **6-gate live-site protocol** with IP-block & cache awareness — not code-repo gates
 3. **Asymmetric agent split by reversibility** (not skill) — model tier as risk control
-4. **TEMUAN.md immutability rule** — forbids deletion, only CLOSED/SUPERSEDED banners with forward refs
+4. **FINDINGS.md immutability rule** — forbids deletion, only CLOSED/SUPERSEDED banners with forward refs
 5. **Freelance commercial context built-in** — scope-as-contract, revision tracking, credential rotation discipline
 
 This convergence is designed specifically for **solo freelancers doing live client work with AI agents** where mistakes have commercial cost (revision penalty, IP block, client trust), not just technical impact.

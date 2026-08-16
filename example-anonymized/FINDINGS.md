@@ -1,4 +1,4 @@
-# TEMUAN — Catalog UI Redesign
+# FINDINGS — Catalog UI Redesign
 
 > Technical facts with IDs. Never deleted — only CLOSED or SUPERSEDED with forward reference.
 
