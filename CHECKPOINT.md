@@ -1,24 +1,24 @@
 # CHECKPOINT — Dead-Man's Switch
 
-> Tulis ini SEBELUM tiap aksi berisiko. Jika sesi mati kacau, sesi baru baca file ini dulu.
+> Write this BEFORE every risky action. If session dies badly, new session reads this file first.
 
 ---
 
-## Entri Terakhir
+## Last Entry
 
-**Tanggal/Waktu:** [TANGGAL WAKTU]
-**Agen:** [Agen 1 / Agen 2]
+**Date/Time:** [DATE TIME]
+**Agent:** [Agent 1 / Agent 2]
 
-### (a) Aksi yang akan dijalankan
-[Deskripsi persis — perintah, endpoint, file yang akan diubah]
+### (a) Action about to run
+[Exact description — command, endpoint, file to be changed]
 
-### (b) State saat ini
-[State sebelum aksi — versi file, konten yang ada, kondisi sistem]
+### (b) Current state
+[State before action — file version, existing content, system condition]
 
-### (c) Cara verifikasi apakah aksi sudah terjadi
-[Cara cek read-only: URL, query, file path, expected output]
+### (c) How to verify if action already happened
+[Read-only check: URL, query, file path, expected output]
 
-### (d) Tindakan per hasil cek
-- Aksi BELUM terjadi → [langkah lanjut]
-- Aksi SUDAH terjadi & OK → [langkah lanjut]
-- Aksi SUDAH terjadi & GAGAL → [langkah recovery]
+### (d) Action per check result
+- Action NOT yet happened → [next step]
+- Action ALREADY happened & OK → [next step]
+- Action ALREADY happened & FAILED → [recovery step]

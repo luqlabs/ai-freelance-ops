@@ -1,26 +1,26 @@
-# PROGRES — [NAMA PROJECT]
+# PROGRES — [PROJECT NAME]
 
-> Satu-satunya sumber status. Log kronologis, terbaru di atas. Penanda TITIK HENTI wajib ada di tiap akhir sesi.
+> Single source of status. Chronological log, newest on top. STOP POINT markers required at end of each session.
 
 ---
 
-## TITIK HENTI — [TANGGAL] sesi [N]
+## STOP POINT — [DATE] session [N]
 
-**State saat ini:** [deskripsi singkat state terakhir]
+**Current state:** [brief description of last state]
 **Backlog:**
 1. [item 1]
 2. [item 2]
 
 ---
 
-<!-- FORMAT ENTRI:
-[TANGGAL] [WAKTU] — [deskripsi aksi/temuan]
-Bukti: [screenshot path / URL / data konkret]
+<!-- ENTRY FORMAT:
+[DATE] [TIME] — [action/finding description]
+Evidence: [screenshot path / URL / concrete data]
 -->
 
-## [TANGGAL]
+## [DATE]
 
-- 🔒 AGEN 1 MULAI — [tugas]
-- [aksi 1] → [hasil]
-- [aksi 2] → [hasil]
-- 🔓 AGEN 1 SELESAI — [ringkasan hasil]
+- 🔒 AGENT 1 START — [task]
+- [action 1] → [result]
+- [action 2] → [result]
+- 🔓 AGENT 1 DONE — [result summary]

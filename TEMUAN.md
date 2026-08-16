@@ -1,17 +1,17 @@
-# TEMUAN — [NAMA PROJECT]
+# TEMUAN — [PROJECT NAME]
 
-> Fakta teknis ber-ID. Tidak pernah dihapus — hanya DITUTUP atau SUPERSEDED dengan forward reference.
+> Technical facts with IDs. Never deleted — only CLOSED or SUPERSEDED with forward reference.
 
 ---
 
 <!-- FORMAT:
-**T[N] — [judul singkat]** | Status: OPEN / CLOSED / SUPERSEDED → T[N]
-- **Bukti:** [screenshot / URL / data]
-- **Implikasi:** [apa artinya untuk project]
-- **Tindakan:** [apa yang dilakukan / perlu dilakukan]
+**T[N] — [short title]** | Status: OPEN / CLOSED / SUPERSEDED → T[N]
+- **Evidence:** [screenshot / URL / data]
+- **Implication:** [what it means for project]
+- **Action:** [what was done / needs to be done]
 -->
 
-**T1 — Kredensial dikirim plaintext via chat** | Status: OPEN
-- **Bukti:** chat log [tanggal]
-- **Implikasi:** risiko kebocoran jika chat tidak aman
-- **Tindakan:** ingatkan rotasi password saat job close; sarankan user admin terpisah
+**T1 — Credentials sent plaintext via chat** | Status: OPEN
+- **Evidence:** chat log [date]
+- **Implication:** leak risk if chat not secure
+- **Action:** remind password rotation at job close; suggest separate admin user
