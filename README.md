@@ -105,6 +105,35 @@ This convergence is designed specifically for **solo freelancers doing live clie
 
 ---
 
+## Context Management & When to Compact
+
+AI agent sessions have token limits. When context grows large (200k–300k tokens), you may need to request a **compact** (context summarization). Without discipline, compaction loses state.
+
+### Pre-Compact Discipline
+
+BEFORE requesting compact, ensure agent has:
+1. ✅ Updated PROGRES.md with last action + evidence
+2. ✅ Updated FINDINGS.md with all new technical findings (T1, T2, ...)
+3. ✅ Written STOP POINT in PROGRES.md (current state + backlog)
+4. ✅ Written CHECKPOINT.md if risky action pending
+5. ✅ Reported summary to you (what's done + what's waiting)
+
+### When to Compact
+
+- ✅ After completing a numbered backlog item
+- ✅ After writing analysis report to file
+- ✅ After client decision logged + next phase planned
+- ❌ NOT mid-implementation of a single change
+- ❌ NOT when CHECKPOINT.md has pending risky action
+
+**Token guideline:** Most AI sessions show token usage in the UI. Request compact when context reaches **200k–300k tokens** to prevent token bloat. Agents typically cannot see their own token count, so monitor this yourself.
+
+After compaction, new session reads PROGRES.md → CHECKPOINT.md → resumes without re-asking questions already answered.
+
+See `CLAUDE.md` template §13 for complete protocol.
+
+---
+
 ## License
 
 MIT
